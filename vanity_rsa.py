@@ -210,7 +210,7 @@ def make_valid_rsa_key(priv_key, pub_key):
         p=p, q=q, 
         d=rsa.rsa_crt_iqmp(phi, e),
         dmp1=rsa.rsa_crt_dmp1(e, p),
-        dmq1=rsa.rsa_crt_dmp1(e, q),
+        dmq1=rsa.rsa_crt_dmq1(e, q),
         iqmp=rsa.rsa_crt_iqmp(p, q),
     ).private_key(BACKEND)
 
